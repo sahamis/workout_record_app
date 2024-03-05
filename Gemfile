@@ -8,6 +8,7 @@ gem "rails", "~> 7.1.3", ">= 7.1.3.2"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+gem "bootstrap-sass"
 gem "sassc-rails"
 
 # Use sqlite3 as the database for Active Record
@@ -75,4 +76,5 @@ group :test do
   gem "minitest-reporters"
   gem "guard"
   gem "guard-minitest"
+  gem 'rails-controller-testing'
 end
