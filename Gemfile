@@ -81,3 +81,6 @@ group :test do
 end
 
 gem 'dotenv-rails'
+gem 'faker'
+gem 'will_paginate'
+gem 'will_paginate-bootstrap-style'

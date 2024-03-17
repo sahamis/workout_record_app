@@ -120,6 +120,8 @@ GEM
     e2mmap (0.1.0)
     erubi (1.12.0)
     execjs (2.9.1)
+    faker (3.2.3)
+      i18n (>= 1.8.11, < 2)
     ffi (1.16.3)
     formatador (1.1.0)
     globalid (1.2.1)
@@ -360,6 +362,9 @@ GEM
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    will_paginate (4.0.0)
+    will_paginate-bootstrap-style (0.3.0)
+      will_paginate (~> 4.0, >= 4.0.0)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     yard (0.9.36)
@@ -380,6 +385,7 @@ DEPENDENCIES
   capybara
   debug
   dotenv-rails
+  faker
   guard
   guard-minitest
   importmap-rails
@@ -401,6 +407,8 @@ DEPENDENCIES
   tzinfo-data
   web-console
   webdrivers
+  will_paginate
+  will_paginate-bootstrap-style
 
 RUBY VERSION
    ruby 3.3.0p0
