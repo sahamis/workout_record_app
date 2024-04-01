@@ -4,11 +4,12 @@ class UsersController < ApplicationController
   before_action :admin_user, only: :destroy
 
   def index
-    @users = User.where(activated: true).paginate(page: params[:page])
+    @users = User.where(activated: true).order(:created_at).paginate(page: params[:page])
   end
 
   def show
     @user = User.find(params[:id])
+    @microposts = @user.microposts.paginate(page: params[:page])
     redirect_to root_url and return unless @user.activated?
   end
 
@@ -52,15 +53,6 @@ class UsersController < ApplicationController
     end
 
     #deforeフィルタ
-
-    #ログイン済みユーザーがどうか確認
-    def logged_in_user
-      unless logged_in?
-        store_location
-        flash[:danger] = "Please log in"
-        redirect_to login_url, status: :see_other
-      end
-    end
 
     def correct_user
       @user=User.find(params[:id])
